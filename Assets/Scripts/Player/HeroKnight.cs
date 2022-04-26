@@ -25,11 +25,12 @@ public class HeroKnight : MonoBehaviour {
     private float               m_delayToIdle = 0.0f;
     private float               m_rollDuration = 8.0f / 14.0f;
     private float               m_rollCurrentTime;
-
+    private BoxCollider2D        weapon;
 
     // Use this for initialization
     void Start ()
-    {
+    {	
+    	weapon = transform.Find("Weapon").GetComponent<BoxCollider2D>();
         m_animator = GetComponent<Animator>();
         m_body2d = GetComponent<Rigidbody2D>();
         m_groundSensor = transform.Find("GroundSensor").GetComponent<Sensor_HeroKnight>();
@@ -75,12 +76,14 @@ public class HeroKnight : MonoBehaviour {
         {
             GetComponent<SpriteRenderer>().flipX = false;
             m_facingDirection = 1;
+            weapon.offset = new Vector2(0.9592946f, 0.7110287f);
         }
             
         else if (inputX < 0)
         {
             GetComponent<SpriteRenderer>().flipX = true;
             m_facingDirection = -1;
+            weapon.offset = new Vector2(-0.9592946f, 0.7110287f);
         }
 
         // Move
