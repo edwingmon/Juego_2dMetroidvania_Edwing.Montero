@@ -7,9 +7,9 @@ using UnityEngine.Audio;
 public class AudioManager : MonoBehaviour
 {
 
-    public AudioMixer musicMixer, masterMixer;
+    public AudioMixer MusicMixer, MasterMixer;
 
-    public AudioSource backgroundMusic, hit, enemyDead, gems;
+    public AudioSource backgroundMusic, hit, enemyDead, gems, mainMenu, gameOver;
 
     public static AudioManager instance;
 
@@ -20,7 +20,7 @@ public class AudioManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        PlayAudio(backgroundMusic);
+        //PlayAudio(backgroundMusic);
         masterSldr.value = masterVol;
         musicSldr.value = musicVol;
     }
@@ -40,12 +40,12 @@ public class AudioManager : MonoBehaviour
 
     public void MasterVolume()
     {
-        masterMixer.SetFloat("masterVolume", masterSldr.value);
+        MasterMixer.SetFloat("MasterVolume", masterSldr.value);
     }
 
     public void MusicVolume()
     {
-        musicMixer.SetFloat("musicVolume", musicSldr.value);
+        MusicMixer.SetFloat("MusicVolume", musicSldr.value);
     }
 
     public void PlayAudio(AudioSource audio) {

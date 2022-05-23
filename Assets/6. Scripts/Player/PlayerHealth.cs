@@ -17,6 +17,10 @@ public class PlayerHealth : MonoBehaviour
     public float knockbackForceY;
     Rigidbody2D rb;
 
+    public GameObject GameOver;
+
+    public static PlayerHealth instance;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -57,6 +61,10 @@ public class PlayerHealth : MonoBehaviour
             if (health <= 0)
             {
                 //aparecer game over!!
+                Time.timeScale = 0;
+                GameOver.SetActive(true);
+                AudioManager.instance.backgroundMusic.Stop();
+                AudioManager.instance.PlayAudio(AudioManager.instance.gameOver);
                 print("player dead!");
 
             }
