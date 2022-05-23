@@ -71,6 +71,7 @@ public class BossBehaviour : MonoBehaviour
     private void OnDestroy()
     {
         BossUI.instance.BossDesactivator();
+        Time.timeScale = 0;
         Win.SetActive(true);
     }
 
