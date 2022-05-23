@@ -63,6 +63,7 @@ public class PlayerHealth : MonoBehaviour
                 //aparecer game over!!
                 Time.timeScale = 0;
                 GameOver.SetActive(true);
+                BossUI.instance.BossDesactivator();
                 AudioManager.instance.backgroundMusic.Stop();
                 AudioManager.instance.PlayAudio(AudioManager.instance.gameOver);
                 print("player dead!");

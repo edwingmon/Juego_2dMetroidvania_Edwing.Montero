@@ -3,7 +3,7 @@ using System.Collections;
 
 public class HeroKnight : MonoBehaviour {
 
-    [SerializeField] float      m_speed = 4.0f;
+    public float      m_speed = 4.0f;
     [SerializeField] float      m_jumpForce = 7.5f;
     //[SerializeField] float      m_rollForce = 6.0f;
     //[SerializeField] bool       m_noBlood = false;
@@ -26,6 +26,18 @@ public class HeroKnight : MonoBehaviour {
     private float               m_rollDuration = 8.0f / 14.0f;
     private float               m_rollCurrentTime;
     private BoxCollider2D        weapon;
+
+
+
+    public static HeroKnight instance;
+
+    private void Awake()
+    {
+        if (instance == null)
+        {
+            instance = this;
+        }
+    }
 
     // Use this for initialization
     void Start ()

@@ -15,8 +15,7 @@ public class EnemyMovement : MonoBehaviour
 
     public Transform wallCheck, pitCheck, groundCheck;
     public bool wallDetected, pitDetected, isGrounded;
-
-    public float detectionsRadius;
+    public float detectionRadius;
     public LayerMask whatIsGround;
 
     // Start is called before the first frame update
@@ -30,33 +29,26 @@ public class EnemyMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        pitDetected = !Physics2D.OverlapCircle(pitCheck.position, detectionsRadius, whatIsGround);
-        wallDetected = Physics2D.OverlapCircle(wallCheck.position, detectionsRadius, whatIsGround);
-        if (pitDetected)
+        pitDetected = !Physics2D.OverlapCircle(pitCheck.position, detectionRadius, whatIsGround);
+        wallDetected = Physics2D.OverlapCircle(wallCheck.position, detectionRadius, whatIsGround);
+        isGrounded = Physics2D.OverlapCircle(groundCheck.position, detectionRadius, whatIsGround);
+        if ((pitDetected || wallDetected) && isGrounded)
         {
-            print("PitDetected");
             Flip();
         }
-        if (wallDetected)
-        {
-            print("WallDetected");
-            Flip();
-        }
-        
-        
-
     }
 
     private void FixedUpdate()
     {
         if (isStatic)
         {
-            anim.SetBool("idle", true);
+            anim.SetBool("Idle", true);
             rb.constraints = RigidbodyConstraints2D.FreezeAll;
         }
         if (isWalker)
         {
             rb.constraints = RigidbodyConstraints2D.FreezeRotation;
+            anim.SetBool("Idle", false);
             if (!walksRight)
             {
                 rb.velocity = new Vector2(-speed * Time.deltaTime, rb.velocity.y);
@@ -68,7 +60,7 @@ public class EnemyMovement : MonoBehaviour
         }
     }
 
-    public void Flip() 
+    public void Flip()
     {
         walksRight = !walksRight;
         transform.localScale *= new Vector2(-1, transform.localScale.y);
