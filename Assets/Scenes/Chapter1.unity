@@ -3720,7 +3720,7 @@ MonoBehaviour:
   countdown: 0
   timeToTeleport: 4
   countdownToTeleport: 0
-  BossHealth: 30
+  BossHealth: 20
   currentHealth: 0
   HealthImg: {fileID: 548533591}
   Win: {fileID: 521734993}
@@ -3802,7 +3802,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyName: The King Of Phantasms
-  healthPoints: 30
+  healthPoints: 20
   speed: 3
   knockbackForceX: 0
   knockbackForceY: 0
