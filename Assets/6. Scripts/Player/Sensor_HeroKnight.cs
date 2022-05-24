@@ -22,7 +22,6 @@ public class Sensor_HeroKnight : MonoBehaviour {
     void OnTriggerEnter2D(Collider2D other)
     {
         if (!other.CompareTag("MainCamera")) {
-            print("he tocado!");
             m_ColCount++;
         }
         
