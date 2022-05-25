@@ -463,7 +463,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &85509179
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2147,7 +2147,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9043920546160527475, guid: a4b4a6d32bcb19248a754d6602ffc7e4, type: 3}
       propertyPath: m_speed
-      value: 2
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 9043920546160527475, guid: a4b4a6d32bcb19248a754d6602ffc7e4, type: 3}
       propertyPath: m_jumpForce
@@ -3720,7 +3720,7 @@ MonoBehaviour:
   countdown: 0
   timeToTeleport: 4
   countdownToTeleport: 0
-  BossHealth: 20
+  BossHealth: 10
   currentHealth: 0
   HealthImg: {fileID: 548533591}
   Win: {fileID: 521734993}
@@ -3802,8 +3802,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyName: The King Of Phantasms
-  healthPoints: 20
-  speed: 3
+  healthPoints: 10
+  speed: 2
   knockbackForceX: 0
   knockbackForceY: 0
   damageToGive: 20
@@ -6512,7 +6512,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: -22}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &985216985
@@ -13122,7 +13122,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1694227038}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.461, y: 0.462, z: 0}
+  m_LocalPosition: {x: 3.488, y: 1.729, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

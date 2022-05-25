@@ -58,9 +58,9 @@
       var buildUrl = "Build";
       var loaderUrl = buildUrl + "/HTMLMetroidRing.loader.js";
       var config = {
-        dataUrl: buildUrl + "/HTMLMetroidRing.data.br",
-        frameworkUrl: buildUrl + "/HTMLMetroidRing.framework.js.br",
-        codeUrl: buildUrl + "/HTMLMetroidRing.wasm.br",
+        dataUrl: buildUrl + "/HTMLMetroidRing.data.unityweb",
+        frameworkUrl: buildUrl + "/HTMLMetroidRing.framework.js.unityweb",
+        codeUrl: buildUrl + "/HTMLMetroidRing.wasm.unityweb",
         streamingAssetsUrl: "StreamingAssets",
         companyName: "DefaultCompany",
         productName: "2dMetroidvania_Project",
@@ -99,7 +99,7 @@
         canvas.style.height = "720px";
       }
 
-      canvas.style.background = "url('" + buildUrl + "/HTMLMetroidRing.jpg.br') center / cover";
+      canvas.style.background = "url('" + buildUrl + "/HTMLMetroidRing.jpg.unityweb') center / cover";
       loadingBar.style.display = "block";
 
       var script = document.createElement("script");
