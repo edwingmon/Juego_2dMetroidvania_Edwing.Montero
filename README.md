@@ -5,6 +5,6 @@ Juego2D estilo Metroidvania con ambientación apocaliptica/fantasía.
 
 
 ## Como jugar
-  ·AWSD para moverse
-  ·Click derecho para atacar
-  ·Espacio para saltar
+* AWSD para moverse
+* Click derecho para atacar
+* Espacio para saltar
